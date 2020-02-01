@@ -1,2 +1,0 @@
-# SearchRecipeAppReact
-Created with CodeSandbox
