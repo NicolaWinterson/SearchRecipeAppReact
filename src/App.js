@@ -10,7 +10,7 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("vegan");
 
   useEffect(() => {
     const getRecipes = async () => {

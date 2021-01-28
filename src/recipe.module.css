@@ -10,6 +10,10 @@
   min-width: 40%;
 }
 
+.recipe ul {
+  align-self: start;
+}
+
 .image {
   border-radius: 50%;
   width: auto;
