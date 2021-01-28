@@ -16,3 +16,9 @@
   height: auto;
   padding: 5px;
 }
+
+.text {
+  padding-left: 2vw;
+  margin-bottom: 0;
+  align-self: flex-start;
+}

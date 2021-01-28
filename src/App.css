@@ -1,12 +1,27 @@
-.App {
-  min-height: 100vh;
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-.header {
+.App {
+  background-color: #46564c;
+  /*background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);*/
+}
+
+.app_header {
+  margin: 0;
+}
+
+.app_title {
+  margin-top: 0;
+  padding-top: 10vh;
   font-size: 48px;
   text-transform: uppercase;
   text-align: center;
+  color: rgb(240, 255, 246);
 }
 
 .search-form {
@@ -23,7 +38,7 @@
 }
 
 .search-button {
-  background: lightcoral;
+  background: #d5c3bb;
   border: none;
   padding: 10px 20px;
   color: white;
