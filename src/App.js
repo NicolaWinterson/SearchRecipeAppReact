@@ -3,16 +3,19 @@ import {_APP_ID, _APP_KEY} from "./AppInfo";
 import Recipe from "./Recipe";
 import "./App.css";
 
-const App = () => {
-  const APP_ID = _APP_ID;
-  const APP_KEY = _APP_KEY;
+console.log("from:" + _APP_KEY)
 
+const App = () => {
+  
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("vegan");
 
   useEffect(() => {
+    const APP_ID = _APP_ID;
+    const APP_KEY = _APP_KEY;
+
     const getRecipes = async () => {
       try {
         const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
@@ -24,7 +27,6 @@ const App = () => {
         const data = await response.json();
         console.log("response done, let's read the json");
         setRecipes(data.hits);
-        console.log(data.hits);
       } catch (error) {
         setError(error);
         console.log("it is broken");
@@ -70,7 +72,7 @@ const App = () => {
       <div className="recipes">
         {recipes.map(recipe => (
           <Recipe
-            key={recipe.recipe.label}
+            key={recipe.recipe.uri}
             title={recipe.recipe.label}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
