@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-//import AppInfo from "./AppInfo";
+import {_APP_ID, _APP_KEY} from "./AppInfo";
 import Recipe from "./Recipe";
 import "./App.css";
 
 const App = () => {
-  const APP_ID = "84242fbb";
-  const APP_KEY = "ad028f406ecb3a11937225bffb20eb36";
+  const APP_ID = _APP_ID;
+  const APP_KEY = _APP_KEY;
 
   const [recipes, setRecipes] = useState([]);
   const [error, setError] = useState(null);
