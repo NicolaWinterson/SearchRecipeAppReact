@@ -19,11 +19,11 @@ const App = () => {
     const getRecipes = async () => {
       try {
         const URL = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
-        console.log(URL);
+        //console.log(URL);
         const response = await fetch(URL, {
           mode: "cors"
         });
-        console.log(response);
+        //console.log(response);
         const data = await response.json();
         console.log("response done, let's read the json");
         setRecipes(data.hits);
